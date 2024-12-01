@@ -1,0 +1,9 @@
+pymongo
+folium
+streamlit-folium
+pandas
+pytz
+plotly
+python-dotenv
+streamlit
+logging

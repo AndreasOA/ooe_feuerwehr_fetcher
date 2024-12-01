@@ -1,0 +1,27 @@
+{
+    "name": "ooef_tasks",
+    "dockerFile": "../DockerFile",
+    "build": { "target": "dev" },
+    "workspaceFolder": "/code",
+    "runArgs": [
+        "--name=ooef_tasks",
+        "--network=host"
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+			"extensions": [
+				"ms-python.python",
+                "ms-python.debugpy",
+				"ms-toolsai.jupyter"
+			]
+		}
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "workspaceMount": "src=${localWorkspaceFolder},dst=/code,type=bind,consistency=cached",
+    "postCreateCommand": ""
+}
