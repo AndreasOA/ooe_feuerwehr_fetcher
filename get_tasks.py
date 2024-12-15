@@ -298,7 +298,7 @@ def getNewTasks(url: str, debug: bool = False):
     db_new_list = []
     if response.status_code != 200:
         print("API Error")
-    resp_json = json.loads(response.content.decode('utf8').replace("'", '"')[9:-2])
+    resp_json = json.loads(response.content.decode('utf8').replace("'", '"'))
     if "einsaetze" not in resp_json.keys():
         return []
     for _, task in resp_json['einsaetze'].items():
